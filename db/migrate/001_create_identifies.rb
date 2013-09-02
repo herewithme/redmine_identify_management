@@ -2,6 +2,7 @@ class CreateIdentifies < ActiveRecord::Migration
   def change
     create_table :identifies do |t|
       t.primary_key :id
+      t.integer :project_id
       t.string :label
       t.string :type
       t.text :description
