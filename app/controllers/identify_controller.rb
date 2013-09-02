@@ -3,7 +3,8 @@ class IdentifyController < ApplicationController
 
 
   def index
-  	@identifies = Identify.all
+  	@project = Project.find(params[:project_id])
+  	@identifies = Identify.find(params[:project_id])
   end
 
   def add
