@@ -1,1 +1,28 @@
 <h2>IdentifyController#index</h2>
+
+<ul>
+	<% @identifies.each do |identify_object| %>
+	  <li>
+	  	<h3 id="<%= identify_object.id %>"><%= identify_object.label %> - <%= identify_object.type %></h3>
+	  	<p><%= identify_object.description %></p>
+	  	
+	  	<h4>Data</h4>
+	  	<ul>
+	  		<li><%= identify_object.data_host %></li>
+	  		<li><%= identify_object.data_port %></li>
+	  		<li><%= identify_object.data_user %></li>
+	  		<li><%= identify_object.data_password %></li>
+	  		<li><%= identify_object.data_comment %></li>
+	  	</ul>
+
+	  	<h4>Others infos</h4>
+	  	<ul>
+	  		<li><%= identify_object.project_id %></li>
+	  		<li><%= identify_object.created_at %></li>
+	  		<li><%= identify_object.updated_at %></li>
+	  		<li><%= identify_object.created_by %></li>
+	  		<li><%= identify_object.updated_by %></li>
+	  	</ul>
+	  </li>
+	<% end %>
+</ul>
