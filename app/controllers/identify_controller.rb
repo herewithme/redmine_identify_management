@@ -4,7 +4,7 @@ class IdentifyController < ApplicationController
 
   def index
   	@project = Project.find(params[:project_id])
-  	@identifies = Identify.find(params[:project_id])
+  	@identifies = Identify.all #find(params[:project_id])
   end
 
   def add

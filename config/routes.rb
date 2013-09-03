@@ -1,5 +1,5 @@
 # Plugin's routes
 # See: http://guides.rubyonrails.org/routing.html
 
-get 'identify', :to => 'identify#index'
-post 'delete/:id', :to => 'identify#delete'
+get 'projects/:project_id/identify', :to => 'identify#index', :via => [:get]
+post 'projects/:project_id/identify/:id/delete', :to => 'identify#delete', :via => [:post]
